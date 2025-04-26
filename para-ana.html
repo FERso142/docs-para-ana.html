@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ana</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6e6, #ffcccc);
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      position: relative;
+      margin: 0 auto 20px;
+      transform: rotate(-45deg);
+      animation: pulse 1s infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: rotate(-45deg) scale(1); }
+      50% { transform: rotate(-45deg) scale(1.1); }
+      100% { transform: rotate(-45deg) scale(1); }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #b30000;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e60000;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 2em;
+      color: #800000;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Hola Ana, tengo algo muy especial que decirte...</h1>
+  <button onclick="mostrarAmor()">Haz clic aquí ❤️</button>
+  <div id="message">Te amo, Ana. ❤️ Por siempre y para siempre.</div>
+
+  <script>
+    function mostrarAmor() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
